@@ -1,0 +1,44 @@
+body
+{
+    background-color: blue;
+}
+div ul
+{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    background-color:aqua;
+    float:left;
+
+}
+div ul li
+{
+    margin:0;
+    padding:0;
+    float:left;
+}
+div ul li a
+{
+    padding: 15px;
+    font-size: 30px;
+    text-decoration:none;
+    font-weight:bolder;
+    color:red;
+}
+form
+{
+    margin-top:30px;
+    width:250px;
+    border:solid 1.0px;
+    position:absolute;
+    top: 200px;
+    left:50%;
+    transform: translate(-50%);
+    /* background-color:rgb(157, 128, 128); */
+    background-color: rgb(62, 62, 63, 0.5);
+}
+.p1
+{
+    margin-left:100px;
+}
+/* .p2{margin-left: 50px;} */

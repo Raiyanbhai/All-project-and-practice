@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var side1, side2, side3;
+        side1=prompt("Enter side1 of triangle: ");
+        side2=prompt("Enter side2 of triangle: ");
+        side3=prompt("Enter side3 of triangle: ");
+        document.write("<br>");
+        document.write("side1 = ",side1);
+        document.write("<br>");
+        document.write("side2 = ",side2);
+        document.write("<br>");
+        document.write("side3 = ",side3);
+        document.write("<br>");
+        if (side1==side2 && side2==side3){
+            document.write("This is Equilateral triangle!");
+        }
+        else if (side1==side2 || side1==side3 || side2==side3){
+            document.write("This is Isosceles triangle!");
+        }
+        else {
+            document.write("This is Scalene triangle!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggme button</title>
+    <link rel="stylesheet" href="Toggle.css">
+</head>
+<body onload="generateCaptcha();">
+    <button id="mode">Dark</button><label> Mode </label>
+    <p>Welcome to my Website!</p>
+    <div class="capcha">
+        <h1>Verify You are Human</h1>
+        <input class="design" type="text" id="mainCaptcha" readonly="readonly"/>
+        <input class="design" type="Button" id="refreshCaptcha"  value="Refresh" onclick="generateCaptcha();"/>
+        <input class="design" type="text" maxlength="6" id="txtInput"/>
+        <input class="design" type="button" id="button1" value="Verify" onclick="checkValidCaptcha();"/>
+        <span id="error"></span>
+        <span id="success"></span>
+    </div>
+    <script src="Toggle.js"></script>
+</body>
+</html>

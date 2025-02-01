@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" type="x-link" href="stock.png"> -->
+    <title>Login To TMS</title>
+    <link rel="stylesheet" href="Home_page.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body onload="generateCaptcha();">
+    <div class="container">
+        <div class="containt">
+            <div class="containt_box">
+                <div class="logo">
+                    <a href="Home_page.html"><img src="stock.png" alt="Nepal Stock Exchange Logo"></a>
+                </div>
+                <div class="company_name">
+                    <span class="compny_text">Nepal Stock Exchange</span><br>
+                    <span class="compny_text">Trade Management System</span><br>
+                    <span class="compny_text">Stock Broker No:- 19</span><br>
+                </div>
+            </div>
+            <div class="input_text">
+                <form class="login_form" onsubmit="return false;">
+                    <div class="form-User">
+                        <label for="username" class="input_label">Username</label><br>
+                        <input type="text" id="username" class="form-input-design" placeholder="Client Code/ User Name" required>
+                        <span id="error1"></span>
+                    </div>
+                    <div class="form-pass">
+                        <label for="password" class="input_label">Password</label><br>
+                        <input type="password" id="password" class="form-input-design" placeholder="Password" required>
+                        <span id="error2"></span>
+                    </div>
+                    <div class="form-captcha-row">
+                        <div class="form_captcha">
+                            <input type="text" id="captcha-check" class="form-input-design" placeholder="Enter Captcha" maxlength="6" required>
+                            <input type="text" id="Captcha" readonly="readonly" class="form-input-design">
+                            <div id="captcha-refresh">
+                                <i class="fa-solid fa-arrows-rotate" onclick="generateCaptcha();"></i>
+                                <i class="fa-solid fa-volume-high cptch-ctrl"></i>
+                            </div>
+                        </div>
+                        <span id="error3"></span>
+                        <div class="form-forget-login">
+                            <div class="forget-div">
+                                <a href="Forgot-Account.html" class="form-forget">Forgot Password?</a>
+                            </div>
+                            <button type="button" id="form-login-btn">Login</button>
+                        </div>
+                        <div class="New-registration">
+                            <a href="New_registration.html" id="new-registration-form">New Registration (Online Trading Account Opening)</a>
+                        </div>
+                    </div>
+                    <h4>Safety Tips:</h4>
+                    <span class="safety-tiips">* Don’t save your password</span>
+                    <span class="safety-tiips">* Don’t share your login credentials</span>
+                    <span class="safety-tiips">* Log out the application before closing</span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Home_page.js"></script>
+</body>
+</html>

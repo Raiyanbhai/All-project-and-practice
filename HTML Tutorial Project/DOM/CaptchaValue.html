@@ -1,0 +1,31 @@
+<!-- To auto set Captcha value using function -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var alphabet, Data=[];
+        for (let i=0; i<=9; i++){
+            Data.push(i);
+        }
+
+        function Charcode(i){
+            return String.fromCharCode(i);
+        }
+        for (let i=65; i<=90; i++) {
+            alphabet=Charcode(i);
+            Data.push(alphabet);
+        }
+        for(let i=97; i<=122; i++){
+            alphabet=Charcode(i);
+            Data.push(alphabet);
+        }
+        document.write("Number, Lowercase & Uppercase alphabets",Data);
+    </script>
+</body>
+</html>

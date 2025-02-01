@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Form</title>
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Permanent Address</h2>
+    <div class="form-group">
+        <label for="permanentStreet">Street:</label>
+        <input type="text" id="permanentStreet" placeholder="Enter Street">
+    </div>
+
+    <div class="form-group">
+        <label for="permanentCity">City:</label>
+        <input type="text" id="permanentCity" placeholder="Enter City">
+    </div>
+
+    <div class="form-group">
+        <label for="permanentState">State:</label>
+        <select id="permanentState">
+            <option value="">Select State</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="permanentCountry">Country:</label>
+        <select id="permanentCountry">
+            <option value="">Select Country</option>
+        </select>
+    </div>
+
+    <h2>Temporary Address</h2>
+    <div class="form-group">
+        <label for="temporaryStreet">Street:</label>
+        <input type="text" id="temporaryStreet" placeholder="Enter Street">
+    </div>
+
+    <div class="form-group">
+        <label for="temporaryCity">City:</label>
+        <input type="text" id="temporaryCity" placeholder="Enter City">
+    </div>
+
+    <div class="form-group">
+        <label for="temporaryState">State:</label>
+        <select id="temporaryState">
+            <option value="">Select State</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="temporaryCountry">Country:</label>
+        <select id="temporaryCountry">
+            <option value="">Select Country</option>
+        </select>
+    </div>
+
+    <button id="sameAsPermanentBtn">Same as Permanent Address</button>
+
+    <script src="sameAs.js"></script>
+
+</body>
+</html>

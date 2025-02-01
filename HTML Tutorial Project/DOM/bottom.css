@@ -1,0 +1,10 @@
+.content{
+    text-transform: uppercase;
+    color: blue;
+    font-weight: bold;
+    background: pink;
+}
+.newclass{
+    background-color: aqua;
+    padding: 50px 10rem;
+}

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration Form</title>
+    <!-- <link rel="shortcut icon" type="x-icon" href="stock.png"> -->
+    <link rel="icon" type="image/jpg" href="stock.png">
+    <link rel="stylesheet" href="New_registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div id="fill_error" class="fill-error">
+        <div class="errorText">
+            <div class="error_icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="dives">
+                <span class="text1">Please fill the permanent address first</span><br>
+                <span class="text2">Error</span>
+            </div>
+            <div class="error_cross"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+    </div>
+    <div id="whole-content">
+        <div class="header-constant">
+            <div class="logo-box">
+                <div class="logo">
+                <a href="Home_page.html"><img src="stock.png" alt="Nepal Stock Exchange Logo"></a>
+                </div>
+                <div class="company_name">
+                    <span class="company_text">Nepal Stock Exchange</span><br>
+                    <span class="company_text">Trade Management System</span><br>
+                    <span class="company_text">Stock Broker No:- 19</span><br>
+                </div>
+            </div>
+            <div class="header-text">
+                <span class="text">Online Registration Form</span>
+            </div>
+        </div>
+        <div id="main-container">
+            <div id="content-column">
+                <h1></h1>
+                <div class="d">
+                    <div id="row-form-steps">
+                        <div class="step-column">
+                            <div class="step-items">
+                                <div stepvalue="1" id="stp1" class="step1 steps">1</div>
+                                <div id="stpTxt1" class="step-name1 step-nameX">General Details</div>
+                            </div>
+                            <div class="line-separator">
+                                <svg height="50" width="104" viewBox="0 0 104 50">
+                                    <path d="M0,14 H104"  stroke-dasharray="6 3" id="saline1" class="line-separator1 svgLine1"></path>
+                                </svg>
+                            </div>
+                            <div class="step-items">
+                                <div stepvalue="2" class="step2 steps">2</div>
+                                <div class="step-name2 step-nameX">Address Details</div>
+                            </div>
+                            <div class="line-separator">
+                                <svg height="50" width="104" viewBox="0 0 104 50">
+                                    <path d="M0,14 H104"  stroke-dasharray="6 3" class="line-separator1 svgLine2"></path>
+                                </svg>
+                            </div>
+                            <div class="step-items">
+                                <div stepvalue="3" class="step3 steps">3</div>
+                                <div class="step-name3 step-nameX">Bank Details</div>
+                            </div>
+                            <div class="line-separator">
+                                <svg height="50" width="104" viewBox="0 0 104 50">
+                                    <path d="M0,14 H104"  stroke-dasharray="6 3" class="line-separator1 svgLine3"></path>
+                                </svg>
+                            </div>
+                            <div class="step-items">
+                                <div stepvalue="4" class="step4 steps">4</div>
+                                <div class="step-name4 step-nameX">Depository Details</div>
+                            </div>
+                            <div class="line-separator">
+                                <svg height="50" width="104" viewBox="0 0 104 50">
+                                    <path d="M0,14 H104"  stroke-dasharray="6 3" class="line-separator1 svgLine4"></path>
+                                </svg>
+                            </div>
+                            <div class="step-items">
+                                <div stepvalue="5" class="step5 steps">5</div>
+                                <div class="step-name5 step-nameX">Document Upload</div>
+                            </div>
+                            <div class="line-separator">
+                                <svg height="50" width="104" viewBox="0 0 104 50">
+                                    <path d="M0,14 H104"  stroke-dasharray="6 3" class="line-separator1 svgLine5"></path>
+                                </svg>
+                            </div>
+                            <div class="step-items">
+                                <div stepvalue="6" class="step6 steps">6</div>
+                                <div class="step-name6 step-nameX">User Agreement</div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <div id="content-box" dataValue="1" class="form1 forms">
+                <div class="contend">
+                    <div class="contentions">
+                        <div class="content_details">
+                            <div class="Box-title">
+                                <h2 class="section-title">General Details</h2>
+                            </div>
+                            <form action="Onsubmit" class="form-details">
+                                <div class="form-value">
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="ReferredBy" class="title-for-input">Referred By</label>
+                                            <input type="text" id="RefrredBy" class="input_value" placeholder="Client Code" required>
+                                        </div>
+                                    </div>
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="ClientType" class="title-for-input">Client Type<sup style="color: red;">*</sup></label>
+                                            <select id="ClientType" class="input_value"required>
+                                                <option value="" disabled selected>Select Client Type</option>
+                                                <option value="Corporate">Corporate</option>
+                                                <option value="Individual">Individual</option>
+                                                <option value="MutualFunds">Mutual Funds</option>
+                                            </select>
+                                            <span id="clienttypeerror" class="errors">The field is mandatory.</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="MobileNumber" class="title-for-input">Mobile Number <sup style="color: red;">*</sup></label>
+                                            <input type="tel" id="MobileNumber" class="input_value " placeholder="Mobile Number" maxlength="10" minlength="10" pattern="\d{10}">
+                                            <span id="mobilenumbererror" class="errors">The field is mandatory.</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="OnlineOffline" class="title-for-input">Online/Offline <sup style="color: red;">*</sup></label>
+                                            <input type="radio" id="OnlineOffline" checked>ONLINE
+                                        </div>
+                                    </div>
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="MemberBranch" class="title-for-input">Member Branch <sup style="color: red;">*</sup></label>
+                                            <select id="MemberBranch" class="input_value ">
+                                                <option value="" disabled selected>Select Member Branch</option>
+                                                <option value="Biratnagar">Biratnagar</option>
+                                                <option value="Kathmandu">Kathmandu</option>
+                                            </select>
+                                            <span id="memberbrancherror" class="errors">The field is mandatory.</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="PanNumber" class="title-for-input">PAN Number</label>
+                                            <input type="text" id="PanNumber" class="input_value" placeholder="PAN Number">
+                                        </div>
+                                    </div>
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="Email" class="title-for-input">Email <sup style="color: red;">*</sup></label>
+                                            <input type="email" id="Email" class="input_value " placeholder="Email" title="example@gmail.com">
+                                            <span id="emailerror" class="errors">The field is mandatory.</span>
+                                        </div>
+                                    </div>
+                                    <div class="change-page">
+                                        <div class="change-page-btn">
+                                            <div class="back-btn"></div>
+                                            <button type="button" nextData="2" id="Nexts" class="next-btn1 Butt">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-submits">
+                        <div class="Submit_btn">
+                            <form>
+                                <button type="cancel"class="cancel-btn btn10">Cancel application</button>
+                                <button type="submit"class="submit-btn btn10">Submit application</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------- -->
+            <div id="content-box" dataValue="2" class="form2 forms">
+                <div class="contend">
+                    <div class="contentions">
+                        <div class="content_details">
+                            <div class="Box-title">
+                                <h2 class="section-title">Address Details</h2>
+                            </div>
+                            <form action="Onsubmit" class="form-details">
+                                <div class="form-section-division">
+                                    <div class="section-title2">
+                                        <h4 class="Address-style-type">Permanent address</h4>
+                                    </div>
+                                    <div class="form-value">
+                                        <div class="input-data input-data2">
+                                            <div class="form-group">
+                                                <label for="country" class="title-for-input"> COUNTRY OF RESIDENCE<sup style="color: red;">*</sup></label>
+                                                <select id="country" class="input_value address-input-value"required>
+                                                    <option disabled selected hidden>Nepal</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="input-data input-data2">
+                                            <div class="form-group">
+                                                <label for="permanent-state" class="title-for-input">STATE<sup style="color: red;">*</sup></label>
+                                                <select id="permanent-state" class="input_value address-input-value " onchange="updateDistricts('permanent')">
+                                                    <option value="" disabled selected>Select State</option>
+                                                </select>
+                                                <span id="permanent-state-error" class="errors">The field is mandatory.</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-data input-data2">
+                                            <div class="form-group">
+                                                <label for="permanent-district" class="title-for-input">DISTRICT<sup style="color: red;">*</sup></label>
+                                                <select id="permanent-district" class="input_value address-input-value " onchange="updateMunicipalities('permanent')">
+                                                    <option value="" disabled selected >Select District</option>
+                                                </select>
+                                                <span id="permanent-district-error" class="errors">The field is mandatory.</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-data input-data2">
+                                            <div class="form-group">
+                                                <label for="permanent-municipality" class="title-for-input">MUNICIPALITY<sup style="color: red;">*</sup></label>
+                                                <select id="permanent-municipality" class="input_value address-input-value ">
+                                                    <option value="" disabled selected>Select Municipality</option>
+                                                </select>
+                                                <span id="permanent-municipality-error" class="errors">The field is mandatory.</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-data input-data2">
+                                            <div class="form-group">
+                                                <label for="parmanent-wardno" class="title-for-input">WARD NO.<sup style="color: red;">*</sup></label>
+                                                <input type="text" id="parmanent-wardno" class="input_value address-input-value " placeholder="Ward Number">
+                                                <span id="parmanent-wardno-error" class="errors">The field is mandatory.</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-data input-data2">
+                                            <div class="form-group">
+                                                <label for="permanent-street" class="title-for-input">STREET/TOLE<sup style="color: red;">*</sup></label>
+                                                <input type="text" id="permanent-street" class="input_value address-input-value " placeholder="Street/Tole">
+                                                <span id="permanent-street-error" class="errors">The field is mandatory.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="temporary_section" id="Temporary_Address">
+                                    <div class="temp_section">
+                                        <div class="check-section">
+                                            <input type="checkbox" id="check_box"><h4 class="check-sms">Same as Permanent Address</h4>
+                                        </div>
+                                        <br _ngcontent-wjm-c11>
+                                        <button type="button" class="add-address-btn" id="add_btn"><i class="fa-solid fa-plus"></i>Add Temporary Address</button>
+                                    </div>
+                                </div>
+                                <!--*********** -->
+                                <div id="dive-division-section">
+                                    <div class="form-section-division2">
+                                        <div class="section-title2">
+                                            <span><h4 class="Address-style-type">Temporary address</h4></span>
+                                            <div class="hover-pointer">
+                                                <span class="temp-delete" id="Address_delete"><i class="fa-solid fa-trash-can"></i> Remove</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-value">
+                                            <div class="input-data input-data2">
+                                                <div class="form-group">
+                                                    <label for="country" class="title-for-input"> COUNTRY OF RESIDENCE<sup style="color: red;">*</sup></label>
+                                                    <select id="country" class="input_value address-input-value "required>
+                                                        <option disabled selected hidden>Nepal</option>
+                                                    </select>
+                                                    <span class="errors">The field is mandatory.</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-data input-data2">
+                                                <div class="form-group">
+                                                    <label for="temporary-state" class="title-for-input">STATE<sup style="color: red;">*</sup></label>
+                                                    <select id="temporary-state" class="input_value address-input-value " onchange="updateDistricts('temporary');">
+                                                        <option value="" disabled selected>Select State</option>
+                                                    </select>
+                                                    <span id="temporary-state-error" class="errors">The field is mandatory.</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-data input-data2">
+                                                <div class="form-group">
+                                                    <label for="temporary-district" class="title-for-input">DISTRICT<sup style="color: red;">*</sup></label>
+                                                    <select id="temporary-district" class="input_value address-input-value " onchange="updateMunicipalities('temporary');">
+                                                        <option value="" disabled selected>Select District</option>
+                                                    </select>
+                                                    <span id="temporary-district-error" class="errors">The field is mandatory.</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-data input-data2">
+                                                <div class="form-group">
+                                                    <label for="temporary-municipality" class="title-for-input">MUNICIPALITY<sup style="color: red;">*</sup></label>
+                                                    <select id="temporary-municipality" class="input_value address-input-value ">
+                                                        <option value="" disabled selected hidden>Select Municipality</option>
+                                                    </select>
+                                                    <span id="temporary-municipality-error" class="errors">The field is mandatory.</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-data input-data2">
+                                                <div class="form-group">
+                                                    <label for="temporary-wardno" class="title-for-input">WARD NO.<sup style="color: red;">*</sup></label>
+                                                    <input type="text" id="temporary-wardno" class="input_value address-input-value " placeholder="Ward Number">
+                                                    <span id="temporary-wardno-error" class="errors">The field is mandatory.</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-data input-data2">
+                                                <div class="form-group">
+                                                    <label for="temporary-street" class="title-for-input">STREET/TOLE<sup style="color: red;">*</sup></label>
+                                                    <input type="text" id="temporary-street" class="input_value address-input-value " placeholder="Street/Tole">
+                                                    <span id="temporary-street-error" class="errors">The field is mandatory.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ********* -->
+                            </form>
+                            <br _ngcontent-wjm-c11>
+                            <div class="change-page">
+                                <div class="change-page-btn">
+                                    <button type="button" backData="1" id="Backs" class="next-btn1 Butt">Back</button>
+                                    <button type="button" nextData="3" id="Nexts" class="next-btn1 Butt">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-submits">
+                        <div class="Submit_btn">
+                            <form>
+                                <button type="cancel"class="cancel-btn btn10">Cancel application</button>
+                                <button type="submit"class="submit-btn btn10">Submit application</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------------- -->
+            <div id="content-box" dataValue="3" class="form3 forms">
+                <div class="contend">
+                    <div class="contentions">
+                        <div class="content_details">
+                            <div class="Box-title">
+                                <h2 class="section-title">Bank Details</h2>
+                            </div>
+                            <form action="Onsubmit" class="form-details" novalidate>
+                                <div class="form-value">
+                                    <div class="bank-section">
+                                        <div class="input-data">
+                                            <div class="form-group">
+                                                <label for="Bank" class="title-for-input">Bank <sup style="color: red;">*</sup></label>
+                                                <select name="Bank" id="Bank" class="input_value " required onchange="updateBranch();">
+                                                    <option value="" disabled selected>Select Account</option>
+                                                </select>
+                                                <span id="bankError" class="errors">The field is mandatory.</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-data input-data2">
+                                            <div class="form-group">
+                                                <label for="Branch" class="title-for-input"> Branch<sup style="color: red;">*</sup></label>
+                                                <select name="Branch" id="Branch" class="input_value address-input-value " required>
+                                                    <option value="" disabled selected>Select Branch</option>
+                                                </select>
+                                                <span id="branchError" class="errors">The field is mandatory.</span>
+                                            </div>
+                                        </div>
+                                        <div class="input-data input-data2">
+                                            <div class="form-group">
+                                                <label for="AccountType" class="title-for-input">Account Type<sup style="color: red;">*</sup></label>
+                                                <select name="AccountType" id="AccountType" class="input_value address-input-value " required>
+                                                    <option value="" disabled selected>Select Type</option>
+                                                    <option>Current</option>
+                                                    <option>Transactional</option>
+                                                    <option>Settlement</option>
+                                                    <option>Collateral</option>
+                                                    <option>Saving</option>
+                                                </select>
+                                                <span id="accountTypeError" class="errors">The field is mandatory.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="AccountNumber" class="title-for-input">Account Number <sup style="color: red;">*</sup></label>
+                                            <input type="text" name="AccountNumber" id="AccountNumber" class="input_value " placeholder="Account Number" required>
+                                            <span id="accountNumberError" class="errors">The field is mandatory.</span>
+                                        </div>
+                                    </div>
+                                    <div class="change-page">
+                                        <div class="change-page-btn">
+                                            <button type="button" backData="2" id="Backs" class="next-btn1 Butt">Back</button>
+                                            <button type="button" nextData="4" id="Nexts" class="next-btn1 Butt">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="form-submits">
+                        <div class="Submit_btn">
+                            <form>
+                                <button type="cancel"class="cancel-btn btn10">Cancel application</button>
+                                <button type="submit"class="submit-btn btn10">Submit application</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-box" dataValue="4" class="form4 forms">
+                <div class="contend">
+                    <div class="contentions">
+                        <div class="content_details">
+                            <div class="Box-title">
+                                <h2 class="section-title">Depository Details (Beneficiary Owner Identity Number)</h2>
+                            </div>
+                            <form action="Onsubmit" class="form-details">
+                                <div class="form-value">
+                                    <div class="input-data">
+                                        <div class="form-group">
+                                            <label for="boid" class="title-for-input">BOID<sup style="color: red;">*</sup></label>
+                                            <input type="text" id="boid" class="input_value " placeholder="BOID" required>
+                                            <span id="boiderrors" class="errors">The field is mandatory.</span>
+                                        </div>
+                                    </div>
+                                    <div class="change-page">
+                                        <div class="change-page-btn">
+                                            <button type="button" backData="3" id="Backs" class="next-btn1 Butt">Back</button>
+                                            <button type="button" nextData="5" id="Nexts" class="next-btn1 Butt">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-submits">
+                        <div class="Submit_btn">
+                            <form>
+                                <button type="cancel"class="cancel-btn btn10">Cancel application</button>
+                                <button type="submit"class="submit-btn btn10">Submit application</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ----- -->
+            <div id="content-box" dataValue="5" class="form5 forms">
+                <div class="contend">
+                    <div class="contentions">
+                        <div class="content_details">
+                            <div class="Box-title">
+                                <h2 class="section-title">Document Upload</h2>
+                            </div>
+                            <form action="Onsubmit" class="form-details">
+                                <div class="form-value">
+                                    <div id="document-page1" class="input-data">
+                                        <div class="form-group document-upload">
+                                            <div class="document-upload-info">
+                                                <span class="document-Type">Citizenship <sup style="color: red;">*</sup></span>
+                                                <span class="document-help-text">(Should be in .pdf format only)</span>
+                                            </div>
+                                            <label class="btn-outline upload-button">
+                                                <div class="leading-icon">
+                                                    <svg fill="#0078d7" height="18" viewBox="0 0 24 24" width="18">
+                                                        <path d="M14 2L20 8V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V4C4 3.46957 4.21071 2.96086 4.58579 2.58579C4.96086 2.21071 5.46957 2 6 2H14ZM18 20V9H13V4H6V20H18ZM12 12L16 16H13.5V19H10.5V16H8L12 12Z" fill="inherit"></path>
+                                                    </svg>
+                                                    Upload
+                                                </div>
+                                                <input hidden multiple type="file"  id="Citizenship">
+                                            </label>
+                                            <!-- <iframe id="citizenshipPreview" width="100%" height="500px" style="display:none;"></iframe> -->
+                                            <div id="adding-new">
+                                                <span class="Icon-btn"><i class="fa-solid fa-plus fa-plus2"></i></span>
+                                            </div>
+                                        </div>
+                                        <span id="CitizenshipError" class="errors">The field is mandatory.</span>
+                                    </div>
+                                    <div id="document-page"  class="input-data">
+                                        <div class="form-group document-upload">
+                                            <div class="document-upload-info">
+                                                <span class="document-Type">PP Size Photo<sup style="color: red;">*</sup></span>
+                                                <span class="document-help-text">(Should be in .pdf format only)</span>
+                                            </div>
+                                            <label class="btn-outline upload-button">
+                                                <div class="leading-icon">
+                                                    <svg fill="#0078d7" height="18" viewBox="0 0 24 24" width="18" >
+                                                        <path d="M14 2L20 8V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V4C4 3.46957 4.21071 2.96086 4.58579 2.58579C4.96086 2.21071 5.46957 2 6 2H14ZM18 20V9H13V4H6V20H18ZM12 12L16 16H13.5V19H10.5V16H8L12 12Z" fill="inherit"></path>
+                                                    </svg>
+                                                    Upload
+                                                </div>
+                                                <input hidden multiple type="file"  id="ppPhoto">
+                                            </label>
+                                            <div id="adding-new">
+                                                <span class="Icon-btn"><i class="fa-solid fa-plus fa-plus2"></i></span>
+                                            </div>
+                                        </div>
+                                        <span id="ppPhotoError" class="errors">The field is mandatory.</span>
+                                    </div>
+                                    <div id="document-page" class="input-data">
+                                        <div class="form-group document-upload">
+                                            <div class="document-upload-info">
+                                                <span class="document-Type">PAN</span>
+                                                <span class="document-help-text">(Should be in .pdf format only)</span>
+                                            </div>
+                                            <label class="btn-outline upload-button">
+                                                <div class="leading-icon">
+                                                    <svg fill="#0078d7" height="18" viewBox="0 0 24 24" width="18">
+                                                        <path d="M14 2L20 8V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V4C4 3.46957 4.21071 2.96086 4.58579 2.58579C4.96086 2.21071 5.46957 2 6 2H14ZM18 20V9H13V4H6V20H18ZM12 12L16 16H13.5V19H10.5V16H8L12 12Z" fill="inherit"></path>
+                                                    </svg>
+                                                    Upload
+                                                </div>
+                                                <input hidden multiple type="file"  id="PANupload">
+                                            </label>
+                                            <div id="adding-new">
+                                                <span id="PANuploadError" class="Icon-btn"><i class="fa-solid fa-plus fa-plus2"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="change-page">
+                                        <div class="change-page-btn">
+                                            <button type="button" backData="4" id="Backs" class="next-btn1 Butt">Back</button>
+                                            <button type="button" nextData="6" id="Nexts" class="next-btn1 Butt">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-submits">
+                        <div class="Submit_btn">
+                            <form>
+                                <button type="cancel"class="cancel-btn btn10">Cancel application</button>
+                                <button type="submit"class="submit-btn btn10">Submit application</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- --- -->
+            <div id="content-box" dataValue="6" class="form6 forms">
+                <div class="contend">
+                    <div class="contentions">
+                        <div class="content_details">
+                            <div class="Box-title">
+                                <h2 class="section-title">User Agreement</h2>
+                            </div>
+                            <div class="agreement-latter">
+                                <div class="agreement-latter-style">
+                                    <button type="button" class="print-button">Print</button>
+                                    <span class="Text-Contain">
+                                        <strong>धितोपत्र कारोबार सञ्चालन विनियमावली २०७५ को विनियम १० संग सम्बन्धित</strong>
+                                    </span>
+                                    <span class="Text-Contain latter-text">
+                                        <strong class="">कारोवार सदस्यर ग्राहकबिचको सम्झौतापत्र</strong>
+                                    </span>
+                                    <p class="latter-para-text">कम्पनी रजिस्ट्रारको कार्यलयमा दर्ता भई नेपाल धितोपत्र बोर्डबाट धितोपत्र दलाल ब्यवसायीको इजाजतप्राप्त गरी नेपाल स्टक एक्सचेञ्ज लिमिटेडको कारोबार सदस्य रहेको, (उप्रान्त प्रथम पक्ष भनिनेछ)</p>
+                                    <div class="latter-div-text">
+                                        <strong class="">तथा</strong>
+                                    </div>
+                                    <p class="fill-section">कम्पनी रजिष्टर्डको कार्यालयमा दर्ता भई प्रदेश जिल्ला गा.पा./न.पा./उ.प.न.पा. वडा मा रजिष्टर्ड कार्यालय रहेको ले (उप्रान्त दोस्रो पक्ष भनिने र सो शब्दले विषय वा प्रसंगले अन्यथा अर्थ लगाएकोमा बाहेक निजका उत्तराधिकारी र/वा कानुनी प्रतिनिधि समेतलाई जनाउने), बीच नेप्सेको कारोबार प्रणालीबाट कारोबार हुने विधि र आपैmले कारोबार गर्ने सम्बन्धमा दोस्रो पक्ष सँग आवश्यक ज्ञान रहेको मानी यो सम्झौता (उप्रान्त सम्झौता भनिने छ) सम्पन्न भएको छ ।</p>
+                                    <p class="">
+                                        <strong class="">यस सम्झौताका पक्षहरु निम्नलिखित शर्तहरु पालना गर्न मञ्जुर छन् ः</strong>
+                                    </p>
+                                    <ol class="order-lists" type="१">
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                        <li class="list-number"></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="change-page-btn">
+                                <button type="button" backData="5" id="Backs" class="next-btn1 Butt">Back</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-submits">
+                        <div class="Submit_btn">
+                            <form>
+                                <button type="cancel"class="cancel-btn btn10">Cancel application</button>
+                                <button type="submit"class="submit-btn btn10">Submit application</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- --- -->
+        </div>
+    </div>
+    <Script src="New_registration.js"></Script>
+    <script src="new.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Confirmation</title>
+    <style>
+        /* Basic styling for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        input[type="password"],
+        input[type="submit"],button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="passwordForm">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password">
+        <button id="buttonbtn">Login</button>
+        <!-- <input type="submit" value="Submit"> -->
+    </form>
+
+    <script>
+        var Form=document.getElementById("passwordForm");
+
+        document.getElementById("buttonbtn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the values from the form fields
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            console.log("password is : " + password);
+            // Check if password and confirm password match
+            // if (password === confirmPassword) {
+            //     // alert("Password and Confirm Password match!");
+            // } else {
+            //     alert("Password and Confirm Password do not match. Please try again.");
+            // }
+        });
+
+
+        // let ary = [1, 2, 3, 4, 5];  // Example array
+        //     let newAry = ary.map((value) => {
+        //        return value * 2;
+        //     });
+        // console.log(ary);
+        // console.log(newAry);
+        // ary.forEach((value) => console.log(value));
+        // newAry.forEach((value) => console.log(value));
+
+    
+        // array reduce method
+        let value = [1, 2,8,5,6,9,7, 2, 3, 4, 5];
+let greatest = value.reduce((acc, cur) => {
+// return acc < cur? cur:acc;
+// 	or
+// return cur>acc? acc:cur;
+// 	or
+return acc > cur? acc:cur;
+
+});
+
+console.log(greatest);
+
+
+    </script>
+</body>
+</html>

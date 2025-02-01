@@ -1,0 +1,49 @@
+body 
+{
+    margin-left:500px;
+    margin-top:250px;
+}
+.div1
+{
+    background-color:rgb(13, 14, 14);
+    height:200px;
+    width:80px;
+    border-radius:10px;
+}
+.div2 
+{
+    background-color:red;
+    height:50px;
+    width:50px;
+    border:1px solid rgb(246, 12, 12);
+    /* padding-top: 12px; */
+    /* margin-top: 20px; */
+    margin-left: 12px;
+    border-radius: 50%;
+    /* margin:12px 12px; */
+}
+.div3 
+{
+    background-color:yellow;
+    height:50px;
+    width:50px;
+    border:1px solid rgb(209, 249, 8);
+    margin-top: 60px;
+    border-radius: 50%;
+}
+.div4 
+{
+    background-color:green;
+    height:50px;
+    width:50px;
+    border:1px solid rgb(3, 112, 10);
+    margin-top: 60px;
+    border-radius: 50%;
+}
+.div5 
+{
+    background-color:rgb(17, 16, 16);
+    height:200px;
+    width:10px;
+    margin-left:36px;
+}

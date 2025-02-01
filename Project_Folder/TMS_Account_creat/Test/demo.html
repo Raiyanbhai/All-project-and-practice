@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo of multile form</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <h3>Create Account</h3>
+            <input type="text" placeholder="Email*" required class="Email">
+            <span class="Fill-error1 ERROR">Please fill this </span>
+            <input type="password" placeholder="Password*" required class="password1">
+            <input type="password" placeholder="Confirm Password*" required class="password2">
+            <span class="Error ERROR">Password dose not match</span>
+            <div class="btn-box">
+                <button type="button" id="next1">Next</button>
+            </div>
+        </form>
+
+        <form id="form2">
+            <h3>Social Links</h3>
+            <input type="text" placeholder="Medium">
+            <input type="text" placeholder="Github">
+            <input type="text" placeholder="Linkedin">
+            <div class="btn-box">
+                <button type="button" id="back1">Back</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </form>
+
+        <form id="form3">
+            <h3>Personal Info</h3>
+            <input type="text" placeholder="First name*" required id="Fname">
+            <span class="Fill-error ERROR ">Please fill this </span>
+            <input type="text" placeholder="Second neme*" required id="Lname">
+            <span class="Fill-error ERROR">Please fill this </span>
+            <input type="text" placeholder="Mobile no.*" required id="Mobile">
+            <span class="Fill-error ERROR">Please fill this </span>
+            <div class="btn-box">
+                <button type="button" id="back2">Back</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-column"><smal>Step 1</smal></div>
+            <div class="step-column"><smal>Step 2</smal></div>
+            <div class="step-column"><smal>Step 3</smal></div>
+        </div>
+    </div>
+    <script>
+        var Form1=document.getElementById("form1");
+        var Form2=document.getElementById("form2");
+        var Form3=document.getElementById("form3");
+
+        var Next1=document.getElementById("next1");
+        var Next2=document.getElementById("next2");
+
+        var Back1=document.getElementById("back1");
+        var Back2=document.getElementById("back2");
+
+        var Progress=document.getElementById("progress");
+
+        var E_error = document.querySelector(".Fill-error1");
+        var P_error = document.querySelector(".Error");
+
+        Next1.onclick = function(e) {
+            e.preventDefault();
+            Form1.style.left = "-450px";
+            Form2.style.left = "40px";
+            Progress.style.width = "240px";
+            let password=document.querySelector(".password1").value;
+            let confirm_password2=document.querySelector(".password2").value;
+            let email=document.querySelector(".Email").value;
+            if(!email){
+                E_error.style.display="block";
+                console.log(email);
+            }
+            if(password!=confirm_password2 || !password){
+                P_error.style.display="block";
+                console.log(password);
+                console.log(confirm_password2);
+            }
+        }
+        
+        Back1.onclick=function(){
+            Form1.style.left="40px";
+            Form2.style.left="450px";
+            Progress.style.width="120px";
+        }
+
+        Next2.onclick=function(){
+            // Form1.style.left="-450px";
+            Form2.style.left="-450px";
+            Form3.style.left="40px";
+            Progress.style.width="360px";
+        }
+
+        Back2.onclick=function(){
+            Form3.style.left="450px";
+            Form2.style.left="40px";
+            Progress.style.width="240px";
+        }
+
+        const Messages= [
+            {id: "Fname"},
+            {id: "Lname"},
+            {id: "Mobile"}
+        ];
+        Form3.addEventListener("submit", function(e) {
+            e.preventDefault();
+            var allValid = true;
+            Messages.forEach(function(message) {
+                let sms = document.getElementById(message.id).value;
+                if (!sms) {
+                    allValid = false;
+                    document.querySelector(`#${message.id} + .Fill-error`).style.display = "block";
+                } else {
+                    document.querySelector(`#${message.id} + .Fill-error`).style.display = "none";
+                    console.log(sms);
+                }
+            });
+            if (allValid) {
+                alert("Form submitted successfully!");
+                window.location.reload();
+            }
+        });
+    </script>
+</body>
+</html>

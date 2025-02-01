@@ -1,0 +1,69 @@
+body
+{
+    background:navy blue;
+}
+div ul
+{
+    margin:0;
+    padding:0;
+    list-style-type:none ;
+    float:left;
+    background-color: aqua;
+}
+div ul li
+{
+    margin:0;
+    padding:0;
+    float:left;
+}
+div ul li a
+{
+    padding:30px;
+    text-decoration:none;
+    color:red;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.background-image
+{
+    background-image: url(home.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    /* width:100vh; */
+    height:100vh;
+}
+*{
+    margin:0;
+    padding:0;
+}
+div p, small
+{
+   font-family: sans-serif;
+   color:whitesmoke;
+   
+   
+}
+label
+{
+    color:blue;
+}
+small
+{
+    font-size: 10px;
+}
+.welcome
+{
+    width: 280px;
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%);
+}
+img 
+{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    border: solid 5px;
+    border-color: rgba(191, 193, 195, 0.5);
+}

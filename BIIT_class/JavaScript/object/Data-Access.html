@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex data Access from Object</title>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <th id="head1"></th>
+            <th id="head2"></th>
+            <th id="head3"></th>
+        </tr>
+        <tr>
+            <td id="data1"></td>
+            <td id="data6"></td>
+            <td id="data11"></td>
+        </tr>
+        <tr>
+            <td id="data2"></td>
+            <td id="data7"></td>
+            <td id="data12"></td>
+        </tr>
+        <tr>
+            <td id="data3"></td>
+            <td id="data8"></td>
+            <td id="data13"></td>
+        </tr>
+        <tr>
+            <td id="data4"></td>
+            <td id="data9"></td>
+            <td id="data14"></td>
+        </tr>
+        <tr>
+            <td id="data5"></td>
+            <td id="data10"></td>
+            <td id="data15"></td>
+        </tr>
+    </table>
+
+    <script>
+        const Data={
+            NameList:["Salam",'Salma','Sahiba',"Aalam","Raiyan"],
+            AgeList: [30, 20, 19, 17, 19],
+            FacilityList: ["Cvil","Dcom","IT","Nurse","Agriculture"],
+        };
+        window.onload=function(){
+            let count=0, counter=0;
+            for(val in Data){
+                count++;
+                let headerElement = document.getElementById(`head${count}`);
+                headerElement.innerText = val;
+                headerElement.style.color = "red";
+                headerElement.style.fontSize = "20px";
+                headerElement.style.padding = "5px 5px 5px 5px";
+
+                const Name=Data[val];
+                for(nme of Name){
+                    counter++;
+                   let dataElement= document.getElementById(`data${counter}`);
+                   dataElement.innerText =nme;
+                   dataElement.style.backgroundColor="blue";
+                   dataElement.style.color="white";
+                   dataElement.style.padding = "5px 5px 5px 5px";
+                   dataElement.style.textAlign="center";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+h1{
+    background: blue;
+    max-width: 370px;
+}
+body {
+    background-image: url('my.jpg') ;
+    /* background-repeat: no-repeat; */
+    /* background-attachment: scroll; */
+    background-attachment: fixed;
+    background-size: cover;
+    /* color:blue; */
+  }
+  p{
+    color:blue;
+  }

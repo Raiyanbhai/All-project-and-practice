@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellipse Element</title>
+    <style>
+        .st1{
+            transform: rotate(90deg);
+            transform-origin: 50% 50%;
+        }
+        .st2{
+            transform: rotate(45deg);
+            transform-origin: 50% 50%;
+        }
+        .st3{
+            transform: rotate(320deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="30.3" fill="aquamarine"/>
+        <ellipse cx="50" cy="50" rx="5" ry="30" stroke-width="0.5" stroke="blue" fill="#e47200"/>
+        <ellipse cx="50" cy="50" rx="5" ry="30" stroke-width="0.5" stroke="blue" fill="#e69b00" class="st1"/>
+        <ellipse cx="50" cy="50" rx="5" ry="30" stroke-width="0.5" stroke="blue" fill="#e6b400" class="st2"/>
+        <ellipse cx="50" cy="50" rx="5" ry="30" stroke-width="0.5" stroke="blue" fill="#e6cc00" class="st3"/>
+        <circle cx="50" cy="50" r="10"  stroke-width="5"stroke="pink" fill="red"/>
+
+    </svg>
+</body>
+</html>

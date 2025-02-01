@@ -1,0 +1,54 @@
+body
+{
+    /* background-image:url(image.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: aliceblue;
+    background-size:519px;
+    background-size: cover; */
+    background-image:url(form.avif);
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:110vh;
+    color:aliceblue;
+    margin-top: 20px;
+}
+form
+{
+    border: solid 1px ;
+    background-color: rgb(62, 62, 63, 0.5);
+    /* opacity: 45%; */
+    /* max-width: 500px;
+    margin-top: 40px; */
+    color:aliceblue;
+    width: 500px;
+    position:absolute;
+    top:200px;
+    left:50%;
+    transform: translate(-50%);
+}
+.abc{
+padding-left: 200px;
+}
+.div2 ul
+{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    float:left;
+    background-color:aqua;
+}
+.div2 ul li
+{
+    margin:0;
+    padding:0;
+    float:left;
+}
+.div2 ul li a
+{
+    padding:15px;
+    text-decoration:none;
+    color:red;
+    font-size:30px;
+    font-weight:bolder;
+}

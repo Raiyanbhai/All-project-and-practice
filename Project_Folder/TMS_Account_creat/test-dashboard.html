@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test dashboard</title>
+    <style>
+        .left_navBar{
+            background-color: rgb(209, 172, 172);
+            display: inline-block;
+            width: 150px;
+            height: 100vh;
+            position:fixed;
+            opacity: 0.7;
+            left: 10px;
+            top: 0;
+        }
+        .top_navBar{
+            position: fixed;
+            background-color: yellowgreen;
+            display: inline-block;
+            width: 100vh;
+            left: 160px;
+            opacity: 0.7;
+            top: 0;
+        }
+        .main_menu{
+            background-color: blueviolet;
+            /* width:20rem; */
+            height:190vh;
+            margin-left:155px;
+            margin-top: 50px;
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_menu">
+        <div class="left_navBar">hello left_navBar
+            
+        </div>
+        <div class="top_navBar">hello top nav bar
+            <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer glow -->
+                <radialGradient id="outerGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="30%" style="stop-color:#ff0000; stop-opacity:1"/>
+                  <stop offset="100%" style="stop-color:#550000; stop-opacity:1"/>
+                </radialGradient>
+                
+                <!-- Inner glow -->
+                <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="20%" style="stop-color:#ffcc00; stop-opacity:1"/>
+                  <stop offset="80%" style="stop-color:#ff0000; stop-opacity:1"/>
+                </radialGradient>
+              
+                <!-- Outer circle -->
+                <circle cx="100" cy="100" r="90" fill="url(#outerGlow)" stroke="black" stroke-width="5"/>
+              
+                <!-- Inner circle -->
+                <circle cx="100" cy="100" r="50" fill="url(#innerGlow)"/>
+              </svg>
+              
+        </div>
+    </div>
+</body>
+</html>

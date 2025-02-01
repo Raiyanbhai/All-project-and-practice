@@ -1,0 +1,31 @@
+.div1
+{
+    background-color:red;
+    height:50px;
+    width:50px;
+    position:static;
+}
+.div2 
+{
+    background-color:blue;
+    height:50px;
+    width:50px;
+    position:relative;
+    left:60px;
+    bottom: 50px;
+    left: 10px;
+}
+.div3 
+{
+    background-color:green;
+    height:50px;
+    width:50px;
+    /* position:absolute; */
+}
+.div4 
+{
+    background-color: yellow;
+    height:50px;
+    width:50px;
+    position:fixed;
+}

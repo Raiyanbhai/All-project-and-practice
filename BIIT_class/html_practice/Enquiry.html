@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset style="width:min-content">
+            <legend><b>Enquiry Form</b></legend>
+            <label>Name: </label>
+            <input type="text" name="name" placeholder="Enter name"><br><br>
+            <label>Gender: </label>
+            <input type="radio" name="gender" value="male" checked="checked">Male
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="other">Other<br><br>
+            <label>Address: </label>
+            <input type="text" name="address" placeholder="Enter address"><br><br>
+            <label>Country: </label>
+            <select name="country" placeholder="select your country" id="country">
+                <option>select your country</option>
+                <option>Nepal</option>
+                <option>India</option>
+                <option>America</option>
+                <option>Canada</option>
+                <option>Japan</option>
+                <option>Chaina</option>
+                <option>Saudi</option>
+                <option>Qatar</option>
+                <option>Pakistan</option>
+            </select><br><br>
+            <label>Hobbies: </label><br>
+            <input type="checkbox" name="Cricket" value="Cricket">Cricket<br>
+            <input type="checkbox" name="football" value="football">Football<br>
+            <input type="checkbox" name="Kabbadi" value="Kabbadi">Kabbadi<br>
+            <input type="checkbox" name="Running" name="Running">Running<br>
+            <input type="checkbox" name="Acting" value="Acting">Acting<br><br>
+            <label>Signature: </label><br><br>
+            <input type="file" name="Signature" value="image"><br><br>
+            <input type="button" name="submit" value="submit">
+            <input type="button" name="Reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
+</html>

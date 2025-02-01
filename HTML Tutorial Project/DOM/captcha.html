@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Captcha</title>
+    <!-- Include SweetAlert for better alerts (if not included already) -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="login-form">
+        <h1>Member Login</h1>
+        <div class="Captcha">
+            <label for="captcha-input">Enter captcha</label>
+            <div class="preview" style="background-color:'pink';"></div>
+            <div class="captcha-form">
+                <input type="text" class="captcha-input" placeholder="Enter Captcha Text">
+                <button class="captcha-refresh">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+            </div>
+        </div>
+        <div class="form-input">
+            <button id="login-btn">Login</button>
+        </div>
+    </div>
+    <script src="captcha.js"></script>
+</body>
+</html>

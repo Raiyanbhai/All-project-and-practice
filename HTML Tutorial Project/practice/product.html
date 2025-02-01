@@ -1,0 +1,33 @@
+
+
+
+<html>
+<head>
+    <title>Product Calculator</title>
+    <script>
+        function sum()
+        {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            if (isNaN(num1) || isNaN(num2))
+            {
+                alert("Please enter a valid number");
+                return;
+            }
+
+            var product = num1 * num2;
+            document.getElementById("result").innerHTML = "The product is: " + product;
+        }
+    </script>
+</head>
+<body>
+    <h2>Product Calculator</h2>
+    <label for="num1">Enter First number:</label>
+    <input type="text" id="num1"><br><br>
+    <label for="num2">Enter Second number:</label>
+    <input type="text" id="num2"><br><br>
+    <button onclick="sum()">Calculate Product</button><br><br>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <style>
+        body{
+            background-color: rgb(39, 19, 187, 0.5);
+            display: flex;
+            justify-content: center;
+        }
+        .div1{
+            height: 30rem; 
+            width: 25rem;
+            background-color: aqua;
+            border-radius: 10px;
+            margin-top: 10%;
+        }
+        .d{
+            height: 1.5rem; 
+            width: 79%;
+            color: red;
+            font-size: xx-large;
+            font-weight: bold;
+            padding-top: 30px;
+            padding-left: 10px;
+            margin: 0;
+        }
+        .d2{
+            height: 20rem; 
+            width: 79%;
+            border: 1.5px solid rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 30px;
+        }
+        form{
+            margin-top: 20px;
+        }
+        .d, .d2{
+            margin-left: 35px;
+        }
+        .botto{
+            background-color: blue;
+            color: white;
+            margin-left: 40%;
+            margin-top: 10%;
+            font-size: large;
+        }
+        .inp{
+            background-color: rgb(237, 241, 243);
+            padding-left: 75px;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="d">
+            Simpel Login Form
+        </div>
+        <div class="d2">
+            <form onsubmit="takvalue()">
+                <input class="inp" type="name" placeholder="Enter your full name" id="name"><br><br>
+                <input class="inp" type="number" placeholder="Mobile number" id="mobile"><br><br>
+                <input class="inp" type="password" placeholder="password" id="password"><br><br>
+                <input class="inp" type="password" placeholder="confirm password" id="confirm"><br><br>
+                <input class="botto" type="submit" value="submit" id="login"><br><br>
+            </form>
+        </div>
+    </div>
+    <script src="Login.js"></script>
+</body>
+</html>

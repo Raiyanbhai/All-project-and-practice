@@ -1,0 +1,124 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: radial-gradient(#e9db0e, #1122db); 
+    width: 100%;
+    height: 80px;
+    position: fixed;
+}
+nav .menu-container{
+    width: 15rem;
+    line-height: 80px;
+    background-color: rgb(226, 156, 43, 0.3);
+}
+.logo-container{
+    font-family: cursive;
+    /* background-color: rgba(231, 38, 4, 0.943); */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-logo{
+    line-height: 80px;
+    width: 10rem;
+    border-radius: 10px 10px 10px 10px;
+    background: radial-gradient(#e66465, #9198e5); 
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+}
+.nav-logo-content a {
+    font-weight: bolder;
+    font-size: 20px; 
+    color: white;
+    
+}
+.logo-text{
+    color: white;
+}
+.Account-section{
+    width: 20rem;
+    line-height: 80px;
+    background-color: rgb(226, 156, 43, 0.3);
+    
+}
+
+/* dropdown section  */
+nav ul{
+    position: absolute;
+    background: darkblue;
+    width: 30%;
+    height: 92.5vh;
+    right: 110%;
+    /* transition: all .3s; */
+    margin-top: -1px;
+    position: fixed;
+}
+nav ul li a{
+    color: white;
+    font-size: x-large;
+    padding: 5px 10px;
+}
+.check-remove{
+    position: absolute;
+    left: 12rem;
+    top: -1.8rem;
+    color: white;
+
+}
+/* .check-remove:hover{
+    background-color: rgb(0, 0, 0);
+    display: none;
+} */
+nav .Active:active{
+    background:#e9db0e;
+}
+nav ul li:hover{
+    background:#e9db0e;
+}
+nav a:hover,a.Active{
+    color: #0082e6;
+}
+#check:checked ~ ul{
+    right: 70%;
+}
+.design{
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+#check, #radio{
+    display: none;
+}
+.ul1{
+    background:#e9db0e;
+    width: 15%;
+    height: 25vh;
+    right: 100%;
+    transition: all .9s;
+    /* padding: 0; */
+}
+#radio:checked ~ .ul1{
+    left: 85%;
+}
+.fa-solid{
+    padding: 0 10px;
+    color: #0a1377;
+}
+body{
+    background: url(form.avif) ;
+    background-size: cover;
+    background-position: no-repeat;
+    height: 100%;
+    width: 100%;
+}

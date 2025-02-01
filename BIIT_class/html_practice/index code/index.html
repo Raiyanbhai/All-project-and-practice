@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Of Area</title>
+    <style>
+        body{
+        background-image:url(../images/galaxy.gif);
+        background-size: cover;
+        background-attachment:fixed;
+        background-repeat:no-repeat;
+        opacity: .6;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <img src="../images/Earth.gif" usemap="#image" alt="page not found">
+        <img src="../images/main_index.png" usemap="#image-map" alt="Page not Found">
+
+    </center>
+    <map name="image">
+
+        <area shape="circle" coords="98,76,63.5" href="earth.html" alt="page not found ">
+    </map>
+    <map name="image-map">
+        <area shape="circle" coords="232,137,110" href="moon.html" alt="Page does not found" title="Click me to Read About Moon"/>
+        <!-- coords= x,y,radius [x(233),y(133),R(247-127=120/2==60"manual value putted")] -->
+
+        <area shape="circle" coords="140,366,69" href="earth.html" alt="Page does not found" title="Click me to Read About Earth">
+
+        <area shape="circle" coords="390,650,236" href="son.html" alt="Page does not found" title="Click me to Read About Son">
+
+        <area shape="poly" coords="531,275,582,217,549,146,621,173,681,126,670,202,738,243,664,261,647,336,607,267" href="star.html" alt="Page does not found" title="Click me to Read About Star">
+    </map>
+</body>
+</html>

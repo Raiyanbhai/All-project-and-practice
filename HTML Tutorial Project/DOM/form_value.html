@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test file</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="text" name="age" id="age" placeholder="Enter your age">
+        <button type="submit" id="submit">submit</button>
+    </form>
+    <script>
+        let form = document.querySelector('#form');
+        // let submit=document.querySelector('#submit');
+        form.addEventListener('submit', function(e){
+            var age=document.querySelector('#age').value;
+            var name=document.querySelector('#name').value;
+            e.preventDefault();
+            console.log(name,age);
+        });
+    </script>
+</body>
+</html>

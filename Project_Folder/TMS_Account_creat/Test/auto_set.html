@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="Onsubmit" class="form-details">
+        <!-- Permanent Address Section -->
+        <div class="form-section-division">
+            <div class="section-title2">
+                <h4 class="Address-style-type">Permanent address</h4>
+            </div>
+            <div class="form-value">
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="country" class="title-for-input">COUNTRY OF RESIDENCE<sup style="color: red;">*</sup></label>
+                        <select id="permanent-country" class="input_value address-input-value" required>
+                            <option disabled selected hidden>Nepal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="permanent-state" class="title-for-input">STATE<sup style="color: red;">*</sup></label>
+                        <select id="permanent-state" class="input_value address-input-value" onchange="updateDistricts('permanent')">
+                            <option value="" disabled selected>Select State</option>
+                            <!-- Add options for states here -->
+                        </select>
+                        <span class="errors">The field is mandatory.</span>
+                    </div>
+                </div>
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="permanent-district" class="title-for-input">DISTRICT<sup style="color: red;">*</sup></label>
+                        <select id="permanent-district" class="input_value address-input-value" onchange="updateMunicipalities('permanent')">
+                            <option value="" disabled selected>Select District</option>
+                        </select>
+                        <span class="errors">The field is mandatory.</span>
+                    </div>
+                </div>
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="permanent-municipality" class="title-for-input">MUNICIPALITY<sup style="color: red;">*</sup></label>
+                        <select id="permanent-municipality" class="input_value address-input-value">
+                            <option value="" disabled selected>Select Municipality</option>
+                        </select>
+                        <span class="errors">The field is mandatory.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Temporary Address Section -->
+        <div class="temporary_section" id="Temporary_Address">
+            <div class="temp_section">
+                <div class="check-section">
+                    <input type="checkbox"><h4 class="check-sms">Same as Permanent Address</h4>
+                </div>
+                <br>
+                <button type="button" class="add-address-btn" id="add_btn"><i class="fa-solid fa-plus"></i>Add Temporary Address</button>
+            </div>
+        </div>
+        <div id="dive-division-section">
+            <div class="form-section-division2">
+                <div class="section-title2">
+                    <span><h4 class="Address-style-type">Temporary address</h4></span>
+                    <div class="hover-pointer">
+                        <span class="temp-delete" id="Address_delete"><i class="fa-solid fa-trash-can"></i> Remove</span>
+                    </div>
+                </div>
+                <div class="form-value">
+                    <div class="input-data input-data2">
+                        <div class="form-group">
+                            <label for="temporary-country" class="title-for-input">COUNTRY OF RESIDENCE<sup style="color: red;">*</sup></label>
+                            <select id="temporary-country" class="input_value address-input-value" required>
+                                <option disabled selected hidden>Nepal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-data input-data2">
+                        <div class="form-group">
+                            <label for="temporary-state" class="title-for-input">STATE<sup style="color: red;">*</sup></label>
+                            <select id="temporary-state" class="input_value address-input-value" onchange="updateDistricts('temporary')">
+                                <option value="" disabled selected>Select State</option>
+                                <!-- Add options for states here -->
+                            </select>
+                            <span class="errors">The field is mandatory.</span>
+                        </div>
+                    </div>
+                    <div class="input-data input-data2">
+                        <div class="form-group">
+                            <label for="temporary-district" class="title-for-input">DISTRICT<sup style="color: red;">*</sup></label>
+                            <select id="temporary-district" class="input_value address-input-value" onchange="updateMunicipalities('temporary')">
+                                <option value="" disabled selected>Select District</option>
+                            </select>
+                            <span class="errors">The field is mandatory.</span>
+                        </div>
+                    </div>
+                    <div class="input-data input-data2">
+                        <div class="form-group">
+                            <label for="temporary-municipality" class="title-for-input">MUNICIPALITY<sup style="color: red;">*</sup></label>
+                            <select id="temporary-municipality" class="input_value address-input-value">
+                                <option value="" disabled selected>Select Municipality</option>
+                            </select>
+                            <span class="errors">The field is mandatory.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+<script src="auto_set.js"></script>    
+</body>
+</html>

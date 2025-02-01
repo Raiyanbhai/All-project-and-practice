@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Element Using Javascript</title>
+</head>
+<body>
+    <form id="FORM">
+        <div class="form-section-division">
+            <div class="section-title2">
+                <h4 class="Address-style-type">Permanent address</h4>
+            </div>
+            <div class="form-value">
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="country" class="title-for-input"> COUNTRY OF RESIDENCE<sup style="color: red;">*</sup></label>
+                        <select id="country" class="input_value address-input-value"required>
+                            <option disabled selected hidden>Nepal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="state" class="title-for-input">STATE<sup style="color: red;">*</sup></label>
+                        <select id="state" class="input_value address-input-value" onchange="getSelectedState();">
+                            <option value="" disabled selected >Select State</option>
+                            <!-- <option value="" disabled selected >Select State</option> -->
+                            <option value="Province1">Province 1</option>
+                            <option value="Province2">Province 2</option>
+                            <option value="Province3">Province 3</option>
+                            <option value="Province4">Province 4</option>
+                            <option value="Province5">Province 5</option>
+                            <option value="Province6">Province 6</option>
+                            <option value="Province7">Province 7</option>
+                        </select>
+                        <span class="errors">The field is mandatory.</span>
+                    </div>
+                </div>
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="district" class="title-for-input">DISTRICT<sup style="color: red;">*</sup></label>
+                        <select id="district" class="input_value address-input-value">
+                            <option value="" disabled selected >Select District</option>
+                        </select>
+                        <span class="errors">The field is mandatory.</span>
+                    </div>
+                </div>
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="municipality" class="title-for-input">MUNICIPALITY<sup style="color: red;">*</sup></label>
+                        <select id="municipality" class="input_value address-input-value">
+                            <option value="" disabled selected>Select Municipality</option>
+                            <option value="Lahan">Lahan</option>
+                            <option value="Dhangadimai">Dhangadimai</option>
+                            <option value="Siraha">Siraha</option>
+                            <option value="Golbazar">Golbazar</option>
+                            <option value="Mirchaiya">Mirchaiya</option>
+                            <option value="Kalyanpur">Kalyanpur</option>
+                            <option value="Bhagawanpur">Bhagawanpur</option>
+                            <option value="Aurahi">Aurahi</option>
+                            <option value="Bishnupur">Bishnupur</option>
+                            <option value="Sukhipur">Sukhipur</option>
+                            <option value="Karjanaha">Karjanaha</option>
+                            <option value="Bariyarpatti">Bariyarpatti</option>
+                            <option value="Laxmipur">Laxmipur Patari</option>
+                            <option value="Naraha">Nahara</option>
+                            <option value="Sakhuwanankarkatti">Sakhuwanankarkatti</option>
+                            <option value="Arnama">Arnama</option>
+                            <option value="Nawarajpur">Nawarajpur</option>
+                        </select>
+                        <span class="errors">The field is mandatory.</span>
+                    </div>
+                </div>
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="wardno" class="title-for-input">WARD NO.<sup style="color: red;">*</sup></label>
+                        <input type="text" id="wardno" class="input_value address-input-value" placeholder="Ward Number">
+                        <span class="errors">The field is mandatory.</span>
+                    </div>
+                </div>
+                <div class="input-data input-data2">
+                    <div class="form-group">
+                        <label for="street" class="title-for-input">STREET/TOLE<sup style="color: red;">*</sup></label>
+                        <input type="text" id="street" class="input_value address-input-value" placeholder="Street/Tole">
+                        <span class="errors">The field is mandatory.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="Add-Element.js"></script>
+</body>
+</html>

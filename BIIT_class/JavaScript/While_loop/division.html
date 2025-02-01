@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var name, roll, sub1, sub2, sub3,sub4, sub5, total, percent,avg;
+        var name=prompt("Enter name of Student : ");
+        roll=prompt("Enter Roll_no of students : ");
+        sub1=prompt("Enter marke of subject'1' : ");
+        sub2=prompt("Enter marke of subject'2' : ");
+        sub3=prompt("Enter marke of subject'3' : ");
+        sub4=prompt("Enter marke of subject'4' : ");
+        sub5=prompt("Enter marke of subject'5' : ");
+        total=Number(sub1)+Number(sub2)+Number(sub3)+Number(sub4)+Number(sub5);
+        document.write("<br><u>Name of Student :<b> ",name);
+        document.write("<br></b></u> Roll_no of students : ",roll);
+        document.write("<br> Marke of subject '1' : ",sub1);
+        document.write("<br> Marke of subject '2' : ",sub2);
+        document.write("<br> Marke of subject '3' : ",sub3);
+        document.write("<br> Marke of subject '4' : ",sub4);
+        document.write("<br> Marke of subject '5' : ",sub5);
+        document.write("<br> Grand Total :<b><u>",+total,"</u></b>");
+        percent=(Number(total)/500)*100;
+        // avg=Number(total)/5;
+        // document.write("<br> Average mark : <b>",+avg,"Avg</b>");
+        document.write("<br> Percentage  :<b>",+percent,"%</b>");
+        document.write("<br>");
+        if(percent>=80){
+            document.write("Result :<b>Passed by Distinction</b><br>Grade   :<b>'A+'</b>");
+        }
+        else if (percent<80 && percent>=65){
+            document.write("Result :<b>Passed by first Division</b><br>Grade   :<b>'A'</b>");
+        }
+        else if (percent<65 && percent>=50){
+            document.write("Result :<b>Passed by second Division</b><br>Grade   :<b>'B'</b>");
+        }
+        else if (percent<50 && percent>=40){
+            document.write("Result :<b>Passed</b> <br>Grade  :<b>'C'</b>");
+        }
+        else{
+            document.write("Result :<b>Failed!</b>");
+        }
+    </script>
+    <br>
+    <h6>(This greading system are according to the Tribhuvan University Undergraduate)</h6>
+</body>
+</html>

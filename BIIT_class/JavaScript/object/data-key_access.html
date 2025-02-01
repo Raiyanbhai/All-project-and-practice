@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data access of object</title>
+</head>
+<body>
+    <script>
+        const student={
+            name: "Raiyan Khan",
+            Age: 22,
+            Roll_no: 2,
+            Tole: "Khoriya",
+            Country: "Nepal",
+        };
+        for(stu in student){
+            // console.log(stu);
+            // console.log(student[stu]);
+            if(stu=="name"||stu=="Tole"||stu=="Country"){
+                console.log(`${stu} = ${student[stu].toUpperCase()}`);
+            }
+            else{
+                console.log(`${stu} = ${student[stu]}`);
+            }
+        }
+    </script>
+</body>
+</html>

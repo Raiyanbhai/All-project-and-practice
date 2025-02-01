@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url('background.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width: 360px;
+    height: 400px;
+    /* background-color: aqua; */
+    /* background-color: #9739; */
+    background-color: #ffffff; /* Changed from 'aqua' to a semi-transparent white */
+    margin: 8% auto;
+    border-radius: 5px;
+    position: relative; 
+    overflow: hidden;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #777;
+}
+.container form{
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    transition: 0.5s;
+}
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    background: transparent;
+}
+::placeholder{
+    color:#999;
+}
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+}
+form button:active{
+    /* outline-color: #ffad06;
+    outline-offset: 0px;
+    outline-style: solid;
+    outline-width: 3px; */
+    outline: 3px dashed #ffad06 ;
+}
+/* #form1{
+    left: 450px;
+} */
+#form2{
+    left: 450px;
+}
+#form3{
+    left: 450px;
+}
+.step-row{
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+    display: flex;
+    outline: none;
+    border: none;
+    border-color: transparent;
+}
+.step-column{
+    width: 100px;
+    color: #333;
+    align-items: center;
+    position: relative;
+    margin-left: 25px;
+}
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    transition: 1s;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#progress::after{      /* This for making trangle at the last of step-column*/
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -19px;
+    top: 0;
+    border-left: 20px solid #ffad06;
+}
+.ERROR{
+    font-size: 12px;
+    color: red;
+    display: none;
+}

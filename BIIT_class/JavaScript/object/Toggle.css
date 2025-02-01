@@ -1,0 +1,35 @@
+*{
+    transition: all 0.10s;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+button{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+/*******************captcha section*******************************/
+div{
+    height: 170px;
+    width: 400px;
+    background-color: rgb(190, 180, 199);
+}
+.design{
+    height: 25px;
+    background-color: rgb(223, 221, 218);
+    margin: 5px;
+}
+#mainCaptcha, #txtInput{
+    text-align: center;
+}
+span{
+    display: block;
+    color: rgb(245, 4, 4);
+    padding-left: 20px;
+}

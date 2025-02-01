@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Placeholder Text</title>
+<style>
+/* Style for the select container */
+.select-container {
+  position: relative;
+}
+
+/* Style for the select element */
+.select-container select {
+  width: 200px; /* Adjust width as needed */
+  padding: 10px;
+}
+
+/* Style for the placeholder text */
+.select-placeholder {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Makes sure placeholder doesn't interfere with selecting options */
+  color: #999; /* Placeholder text color */
+}
+
+/* Style for the selected option */
+.select-container select:focus + .select-placeholder,
+.select-container select:not(:placeholder-shown) + .select-placeholder {
+  display: none; /* Hide placeholder when an option is selected */
+}
+</style>
+</head>
+<body>
+
+<!-- Select container with placeholder -->
+<div class="select-container">
+  <select>
+    <option disabled selected hidden>Select an option</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  <span class="select-placeholder">Select an option</span>
+</div>
+
+</body>
+</html>

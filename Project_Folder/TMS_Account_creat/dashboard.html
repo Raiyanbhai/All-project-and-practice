@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard of TMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="main_menu">
+        <div class="left_nav">
+            <div class="left-head">
+                <div class="logoContent">
+                    <div class="logo">
+                        <img src="stock.png" alt="">
+                    </div>
+                    <div class="logoTextContainer">
+                        <div class="logoText1">NEPAL STOCK EXCHANGE</div>
+                        <div class="logoText2">Trade Management System</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top_nav">
+            <div class="top-head">
+                <div class="infoContainer">
+                    <div class="indicator1">
+                        <div class="heading">
+                            <p class="text">NEPSE</p>
+                            <div class="loading">56425.52</div>
+                            <div class="loading">56425525.55052</div>
+                        </div>
+                        <div class="heading">
+                            <p class="text">SENSIND</p>
+                            <div class="loading">56425.52</div>
+                            <div class="loading">56425525.55052</div>
+                        </div>
+                        <div class="heading">
+                            <p class="text">NEPSE</p>
+                            <div class="loading">56425.52</div>
+                            <div class="loading">56425525.55052</div>
+                        </div>
+                        <div class="heading">
+                            <p class="text">SENSIND</p>
+                            <div class="loading">56425.52</div>
+                            <div class="loading">56425525.55052</div>
+                        </div>
+                    </div>
+                    <div class="indicator2">
+                        <div class="activeSession">
+                            <h6 class="activeText1">Active Sessions</h6>
+                            <p class="activeText2">NO ACTIVE SESSIONS</p>
+                        </div>
+                        <div class="turnover">turnover:
+                            <div class="turnoverContent"></div>
+                            Volume:
+                            <div class="turnoverContent"></div>
+                        </div>
+                        <div class="indicator">indicator:
+                            <div class="indicatorBulb"></div>
+                        </div>
+                        <div class="liveInfo">liveInfo:
+                            <div class="bell"></div>
+                            <div class="bellText"></div>
+                        </div>
+                        <div class="accounts">
+                            <ul class="ACcontain">
+                                <li class="ACnumber">
+                                    <span class="spanId">20230957902 <i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+                                </li>
+                            </ul>
+                                    <ul class="ACtexts">
+                                        <li class="ACtext1"><i class="fa-solid ACtext1Icon fa-user"></i>MD SALAMAT RAIN</li>
+                                        <li class="ACtext1"><i class="fa-solid ACtext1Icon fa-lock"></i>Change Password</li>
+                                        <li class="ACtext1"><i class="fa-solid ACtext1Icon fa-bell"></i>Expires On:2025-05-01</li>
+                                        <li class="ACtext1"><i class="fa-solid ACtext1Icon fa-circle-info"></i>About TMS</li>
+                                        <li class="ACtext1"><i class="fa-solid ACtext1Icon fa-circle-question"></i>Help</li>
+                                        <li class="ACtext1"><i class="fa-solid ACtext1Icon fa-right-from-bracket"></i>Log Out</li>
+                                    </ul>
+                                <!-- </li> -->
+                            <!-- </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let ACcontain=document.querySelector(".ACcontain");
+        let ACtexts=document.querySelector(".ACtexts");
+        let main_menu=ACcontain.querySelector(".main_menu");
+        ACtexts.style.display="none";
+        ACcontain.onclick=function(){
+            if(ACtexts.style.display === "none")
+            {
+                ACtexts.style.display="block";
+            }
+            else{
+                ACtexts.style.display="none";
+            }
+        };
+    </script>
+</body>
+</html>

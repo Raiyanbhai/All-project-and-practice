@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Element</title>
+    <style>
+        .description {
+            position: absolute;
+            display: none;
+            background-color: white;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 100 100 " style="border: 1px solid black; padding: 90px;">
+        <!-- --------------------Line command---------------------- -->
+        <path id="line1" d="M10,20 H20 V30 H10 Z" stroke="brown" fill="darkblue"/>
+        <path id="line2" d="M30,10 H80 V60 H30 Z" stroke-width="0.5" stroke="red" fill="yellow"/> 
+        <path id="line3" d="M40,20 L70,20 L70,50 L40,50 L40,20" stroke-width="0.5" stroke="black" fill="blue"/>
+
+        <!-- --------------------Cubic Bezier curves--------------- -->
+        <path id="Cubic1" d="M5,70 C15,75 20,65 30,70 S40,65 50,70 S58,65 68,70" stroke-width="0.3" stroke="aqua" fill="pink"/>
+        <path id="Cubic2" d="M68,70 C68,77 78,77 78,70"stroke-width="0.5" stroke="orange" fill="darkgrey"/>
+        <path id="Cubic3" d="M68,70 C68,63 78,63 78,70"stroke-width="0.5" stroke="pink" fill="grey"/>
+
+        
+        <!-- ---------------------Quadratic Bezier Curves--------- -->
+        <path id="Quadratic" d="M40,63 Q40,63 80,63 Q80,63 80,80 Q80,80 40,80 Q40,80 40,63 Z" stroke-width="2" stroke="black" fill="none"/>
+
+        <!-- ---------------------Arc with some elements------------->
+        <path id="arc" d="M30,94 A40,90 0 0,1 70,94 v5 H30 V94" stroke="black" fill="green"/>
+    </svg>
+
+    <p id="desc1" class="description"> Made by line-element</p>
+    <p id="desc2" class="description">Made by line-element</p>
+    <p id="desc3" class="description">Made by line-element</p>
+    <p id="desc4" class="description">Made by Cubic Bezier Curves </p>
+    <p id="desc5" class="description">Made by Cubic Bezier Curves</p>
+    <p id="desc6" class="description">Made by Cubic Bezier Curves</p>
+    <p id="desc7" class="description">Made by Quadratic Bezier Curves</p>
+    <p id="desc8" class="description">Made by Arc-element</p>
+
+    <script>
+        const elements=[
+            {id: 'line1', desc:'desc1'},
+            {id: 'line2', desc:'desc2'},
+            {id: 'line3', desc:'desc3'},
+            {id: 'Cubic1', desc:'desc4'},
+            {id: 'Cubic2', desc:'desc5'},
+            {id: 'Cubic3', desc:'desc6'},
+            {id: 'Quadratic', desc:'desc7'},
+            {id: 'arc', desc:'desc8'}
+        ];
+        elements.forEach(element => {
+            const svgelement= document.getElementById(element.id);
+            const description= document.getElementById(element.desc);
+            console.log(element.id);
+            console.log(element.desc);
+            svgelement.addEventListener('mouseover', function(e){
+                const rect= e.target.getBoundingClientRect();
+                description.style.top=`${rect.bottom + window.scrollY +5}px`;
+                description.style.left=`${rect.left + window.scrollX}px`;
+                description.style.display= 'block';
+            });
+            svgelement.addEventListener('mouseout', function(e){
+                description.style.display= 'none';
+            });
+        });
+    </script>
+</body>
+</html>

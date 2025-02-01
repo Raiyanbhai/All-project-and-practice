@@ -1,0 +1,169 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Left Navigation */
+.left_nav {
+    background-color: #fff;
+    display: inline-block;
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #bdacac;
+}
+
+/* Top Navigation */
+.top_nav {
+    background-color: #fff;
+    width: calc(100% - 290px);
+    height: 10vh;
+    position: fixed;
+    left: 290px;
+    top: 0;
+    border-bottom: 1px solid #bdacac;
+}
+
+/* Main Menu */
+.main_menu {
+    margin-left: 290px;
+    margin-top: 10vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+    height: auto;
+}
+
+/* Logo Section */
+.logoContent {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logoTextContainer {
+    color: #0078d7;
+    line-height: 1.5;
+}
+
+.logoText1 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.logoText2 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Info Section */
+.infoContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.indicator1, .indicator2 {
+    display: flex;
+    gap: 20px;
+}
+
+.heading, .indicator, .liveInfo, .activeSession, .turnover, .accounts {
+    padding: 10px 0;
+}
+
+/* Accounts Dropdown */
+.accounts ul {
+    list-style: none;
+    position: relative;
+}
+
+.accounts ul li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.accounts ul li:hover > ul {
+    display: block;
+}
+
+.accounts ul li > ul li {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.accounts ul li > ul li:hover {
+    background-color: #0078d7;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .left_nav {
+        width: 200px;
+    }
+
+    .top_nav {
+        width: calc(100% - 200px);
+    }
+
+    .main_menu {
+        margin-left: 200px;
+    }
+
+    .logo img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .logoText1, .logoText2 {
+        font-size: 13px;
+    }
+
+    .infoContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .left_nav {
+        width: 100%;
+        height: auto;
+    }
+
+    .top_nav {
+        width: 100%;
+        left: 0;
+    }
+
+    .main_menu {
+        margin-left: 0;
+    }
+
+    .infoContainer {
+        flex-direction: column;
+    }
+
+    .indicator1, .indicator2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

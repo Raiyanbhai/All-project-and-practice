@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .container{
+            position: relative;
+            height: 400px;
+            width: 800px;
+            background-image: url("amazon.page2.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+        
+        }
+        .container::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 800px;
+            height: 100vh;
+            margin-bottom: -100vh;
+            background: linear-gradient(to circle, rgba(100, 154, 220, 0),rgba(25, 1, 132, 0.8));
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content"></div>
+    </div>
+</body>
+</html>
